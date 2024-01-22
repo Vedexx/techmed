@@ -1,0 +1,203 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+@font-face {
+  font-family: "Buyan";
+  src: url("../fonts/BuyanRegular.ttf");
+  src: url("../fonts/BuyanRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Buyan";
+  src: url("../fonts/BuyanBold.ttf");
+  src: url("../fonts/BuyanBold.woff") format("woff");
+  font-weight: 700;
+}
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #681E20;
+}
+.promo__title {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  margin-right: 34px;
+}
+.promo__link {
+  display: inline-block;
+  padding: 5px;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: normal;
+  text-decoration-line: underline;
+  transition: transform 0.3s ease-in-out;
+}
+.promo__link:hover {
+  transform: scale(1.1);
+  text-decoration-line: underline;
+}
+
+.header {
+  background: green;
+  padding-top: 25px;
+}
+.header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.header__logo {
+  color: #254D5A;
+  font-family: "Buyan", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
+.header__slogan {
+  color: #575D62;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 220px;
+}
+.header__address {
+  color: #575D62;
+  font-size: 14px;
+  line-height: normal;
+}
+.header__address img {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+}
+.header__mode {
+  color: #575D62;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+}
+.header__mode img {
+  width: 11px;
+  height: 11px;
+  margin-right: 4px;
+}
+.header__social {
+  display: flex;
+  justify-content: space-between;
+  min-width: 109px;
+  outline: 1px solid red;
+}
+.header__social img {
+  height: 20px;
+}
+.header__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  max-width: 180px;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+}
+.header__telephone {
+  outline: 1px solid red;
+}
+.header__telephone span {
+  color: black;
+  display: inline-block;
+  margin-top: -20px;
+}
+
+/*# sourceMappingURL=style.css.map */

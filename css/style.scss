@@ -1,0 +1,137 @@
+@import "nullstyle.scss";
+
+@font-face {
+  font-family: 'Buyan';
+  src: url('../fonts/BuyanRegular.ttf');
+  src: url('../fonts/BuyanRegular.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Buyan';
+  src: url('../fonts/BuyanBold.ttf');
+  src: url('../fonts/BuyanBold.woff') format('woff');
+  font-weight: 700;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Montserrat:wght@400;700&display=swap');
+//font-family: 'Manrope', sans-serif;
+//font-family: 'Montserrat', sans-serif;
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+.container{
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #681E20;
+
+  &__title {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: normal;
+    margin-right: 34px;
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 5px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration-line: underline;
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      text-decoration-line: underline;
+    }
+  }
+}
+.header{
+  background: green;
+  padding-top: 25px;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__logo{
+    color: #254D5A;
+    font-family: "Buyan", sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.4px;
+
+  }
+  &__slogan{
+    color: #575D62;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: normal;
+    max-width: 220px;
+  }
+  &__address{
+    img{
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+    }
+    color: #575D62;
+    font-size: 14px;
+    line-height: normal;
+  }
+  &__mode{
+    img{
+      width: 11px;
+      height: 11px;
+      margin-right: 4px;
+    }
+    color: #575D62;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+  }
+  &__social{
+    display: flex;
+    justify-content: space-between;
+    min-width: 109px;
+    img{
+      height: 20px;
+    }
+    outline: 1px solid red;
+  }
+
+  &__contacts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 180px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: normal;
+  }
+  &__telephone{
+    outline: 1px solid red;
+    span{
+      color: black;
+      display: inline-block;
+      margin-top: -20px;
+    }
+  }
+}
+
+
+

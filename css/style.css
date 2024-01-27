@@ -167,6 +167,71 @@ a:hover {
   padding: 18px 40px;
 }
 
+.request_form {
+  background-color: #4C8FA0;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  height: 583px;
+}
+.request_form__title {
+  color: #FFF;
+  font-family: "Buyan", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.request_form__description {
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 40px;
+}
+.request_form input {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  border-radius: 50vh;
+}
+.request_form__telephone {
+  padding: 18px 0 18px 30px;
+  color: #575D62;
+  margin-bottom: 20px;
+}
+.request_form__email {
+  padding: 18px 0 18px 30px;
+  color: #575D62;
+  margin-bottom: 20px;
+}
+.request_form__answer {
+  border-radius: 30px;
+  flex: 2;
+  color: #575D62;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  padding: 18px 18px 18px 30px;
+  margin-bottom: 20px;
+  resize: none;
+}
+.request_form__submit {
+  background-color: #254D5A;
+  padding: 18px 0;
+  text-align: center;
+  color: #FFF;
+  font-family: "Buyan", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.24px;
+}
+
 .promo {
   display: flex;
   align-items: center;
@@ -592,6 +657,347 @@ a:hover {
 }
 .price__table thead .blank {
   background-color: #FFFFFF;
+}
+
+.faq {
+  background-color: #F7F7F7;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.faq__title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.faq__row {
+  display: flex;
+}
+.faq__list {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+}
+.faq__header {
+  display: flex;
+  padding: 38px 40px;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  justify-content: space-between;
+}
+.faq__header h3 {
+  color: #575D62;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+}
+.faq__trigger {
+  background-color: #FFFFFF;
+}
+[data-drawer-showing=true] .faq__trigger {
+  transform: rotate(45deg);
+}
+.faq__content {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  color: #575D62;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  padding-left: 40px;
+  transition: 0.4s;
+  overflow: hidden;
+}
+.faq__content[aria-hidden=true] {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.faq__content[aria-hidden=false] {
+  max-height: var(--containerHeight, 1000px);
+}
+.faq__form {
+  flex: 1;
+}
+.faq__item {
+  margin-bottom: 10px;
+}
+
+.diff {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.diff__title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.diff__row {
+  display: flex;
+  border-radius: 30px;
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+}
+.diff__concurrent {
+  padding: 30px 20px 50px 20px;
+  flex: 1;
+}
+.diff__concurrent-name {
+  color: #575D62;
+  text-align: center;
+  font-family: "Buyan", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 117.6%;
+  margin-bottom: 40px;
+}
+.diff__concurrent-item {
+  margin-bottom: 20px;
+  padding-left: 30px;
+  position: relative;
+  color: #575D62;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 117.6%;
+}
+.diff__concurrent-item.yes:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  background: url("../img/yes_icon.png") center no-repeat;
+  background-size: contain;
+}
+.diff__concurrent-item.no:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  background: url("../img/no_icon.png") center no-repeat;
+  background-size: contain;
+}
+.diff__us {
+  flex: 1.3;
+  border-radius: 35px;
+  background: #4C8FA0;
+  position: relative;
+  transform: scale(1.1);
+  margin-right: 20px;
+  margin-left: 20px;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.diff__us-name {
+  color: #FFF;
+  text-align: center;
+  font-family: "Buyan", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 117.6%;
+  margin-bottom: 40px;
+}
+.diff__us-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 30px;
+}
+.diff__us-item {
+  margin-bottom: 20px;
+  padding-left: 35px;
+  position: relative;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 117.6%;
+  color: #FFF;
+}
+.diff__us-item:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  background: url("../img/us_icon.png") center no-repeat;
+  background-size: contain;
+}
+.diff__link {
+  display: block;
+  text-align: center;
+}
+
+.about {
+  padding-bottom: 100px;
+}
+.about__row {
+  display: flex;
+}
+.about__text {
+  flex: 1;
+  margin-right: 40px;
+}
+.about__title {
+  margin-bottom: 20px;
+}
+.about__description {
+  margin-bottom: 20px;
+  color: #575D62;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+}
+.about__link {
+  width: 50%;
+  text-align: center;
+}
+.about__left {
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+.about__slider {
+  position: relative;
+  margin-bottom: 20px;
+}
+.about__slider .slick-list {
+  overflow: hidden;
+}
+.about__slider .slick-track {
+  display: flex;
+}
+.about__slider .slick-arrow {
+  position: absolute;
+  bottom: 50%;
+  font-size: 0;
+  width: 60px;
+  height: 60px;
+}
+.about__slider .slick-prev {
+  background: url(../img/l_arrow.png);
+  left: -30px;
+  z-index: 2;
+}
+.about__slider .slick-next {
+  background: url(../img/r_arrow.png);
+  right: -30px;
+}
+.about__see {
+  color: #575D62;
+  font-family: "Buyan", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+
+.partners {
+  padding: 50px 0;
+  background: url("../img/partners/partners_bg.png") top center no-repeat;
+  background-size: cover;
+}
+.partners__title {
+  font-size: 0;
+}
+.partners__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.partners__item {
+  transition: 0.3s;
+}
+.partners__item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.reviews {
+  padding-top: 100px;
+}
+.reviews__title {
+  text-align: center;
+}
+.reviews__buttons {
+  margin: 0 auto 40px auto;
+  max-width: 340px;
+  display: flex;
+  justify-content: space-between;
+}
+.reviews__buttons button {
+  color: #BFBFBF;
+  font-family: "Buyan", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.24px;
+  background: none;
+}
+.reviews__buttons button.active {
+  text-decoration: underline;
+  color: #575D62;
+}
+.reviews__list {
+  min-width: 0;
+  margin-right: 90px;
+  margin-left: 90px;
+  position: relative;
+}
+.reviews__list .slick-list {
+  overflow: hidden;
+}
+.reviews__list .slick-track {
+  display: flex;
+  gap: 100px;
+}
+.reviews__list .slick-arrow {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  margin-top: -5px;
+  font-size: 0;
+  height: 10px;
+  width: 20px;
+  padding: 10px;
+}
+.reviews__list .slick-prev {
+  font-size: 0;
+  background: url("../img/prev_icon.svg") center top no-repeat;
+  background-size: contain;
+  left: -100px;
+}
+.reviews__list .slick-next {
+  right: -100px;
+  background: url("../img/next_icon.svg") top center no-repeat;
+  background-size: contain;
+}
+.reviews__item {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+.reviews__logo {
+  margin-bottom: 20px;
+  width: 140px;
+  object-fit: cover;
+}
+.reviews__text {
+  color: #575D62;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 30px;
+  flex: 1;
+}
+.reviews__time {
+  color: #575D62;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 /*# sourceMappingURL=style.css.map */

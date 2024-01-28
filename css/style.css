@@ -622,7 +622,11 @@ a:hover {
   background: linear-gradient(to right, white, gray 3px, transparent 3px);
 }
 .price__table tr td {
+  position: relative;
   text-align: center;
+  z-index: 2;
+  background: #FFF;
+  box-shadow: 10px 0 0 10px gray;
 }
 .price__table tr td:first-child {
   max-width: 360px;

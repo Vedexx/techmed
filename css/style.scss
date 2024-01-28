@@ -638,7 +638,11 @@ a {
     }
 
     tr td {
+      position: relative;
       text-align: center;
+      z-index: 2;
+      background: #FFF;
+      box-shadow: 10px 0 0 10px gray;
     }
 
     tr td:first-child {
@@ -691,6 +695,7 @@ a {
         background-color: #FFFFFF;
       }
     }
+
   }
 }
 

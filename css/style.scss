@@ -37,7 +37,15 @@ a {
   margin: 0 auto;
   padding: 0 10px;
 }
-
+.logo{
+  color: #254D5A;
+  font-family: "Buyan", sans-serif;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.4px;
+}
 .button {
   color: #FFF;
   font-family: "Buyan", sans-serif;
@@ -49,9 +57,38 @@ a {
   background-color: #254D5A;
   border-radius: 50vh;
   transition: 0.3s ease;
-
   &:hover {
     transform: scale(1.1);
+  }
+}
+.telephone{
+  border-radius: 50vh;
+
+  color: #575D62;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: normal;
+  text-align: left;
+  padding: 18px 40px;
+}
+.contact-block{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 180px;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 800;
+  gap: 2px;
+  &__telephone {
+    margin-bottom: 5px;
+    color: #FFF;
+
+    img {
+      height: 15px;
+      padding-top: 3px;
+      margin-right: 6px;
+    }
   }
 }
 
@@ -88,23 +125,6 @@ a {
   text-transform: uppercase;
 }
 
-.order_button {
-  &__buttons {
-    display: flex;
-  }
-
-  &__telephone {
-    border: 1px solid #254D5A;
-    border-radius: 50vh;
-    margin-right: 40px;
-    color: #575D62;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: normal;
-    text-align: center;
-    padding: 18px 40px;
-  }
-}
 .request_form{
   background-color: #4C8FA0;
   padding: 30px;
@@ -171,12 +191,29 @@ a {
   }
 }
 
+.social {
+  display: flex;
+  justify-content: flex-start;
+  min-width: 109px;
+  &__link{
+    margin-right: 10px;
+  }  img {
+    box-shadow: 0 0 10px 5px #4C8FA0;
+    height: 20px;
+    background-color: #4C8FA0;
+    background-color: rgba(76, 143, 160, 0.8);
+  }
+
+}
 
 .promo {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #681E20;
+  @media (max-width: 960px) {
+    display: none;
+  }
 
   &__title {
     color: #FFF;
@@ -204,12 +241,16 @@ a {
 }
 
 .header__wrapper {
+
   .bg {
     position: absolute;
-    width: 38%;
+    width: calc(50% - 200px);
     height: 740px;
     right: 0;
     z-index: -5;
+    @media (max-width: 960px) {
+      display: none;
+    }
   }
 }
 
@@ -217,23 +258,29 @@ a {
   //background: green;
   padding-top: 25px;
   padding-bottom: 35px;
+  @media (max-width: 540px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+  }
 
   &__row {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-bottom: 13px;
+    @media (max-width: 540px) {
+    flex-direction: column;
+      gap: 5px;
+      align-items: center;
+  }
+
+
   }
 
   &__logo {
-    color: #254D5A;
-    font-family: "Buyan", sans-serif;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: 0.4px;
     margin-right: 10px;
+
   }
 
   &__slogan {
@@ -243,8 +290,15 @@ a {
     line-height: normal;
     max-width: 220px;
     margin-right: 10px;
+    @media (max-width:540px) {
+      display: none;
+    }
   }
-
+  &__social{
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
   &__address {
     margin-right: 10px;
 
@@ -275,46 +329,33 @@ a {
     line-height: normal;
   }
 
-  &__social {
-    display: flex;
-    justify-content: space-between;
-    min-width: 109px;
 
-    img {
-      box-shadow: 0 0 10px 5px #4C8FA0;
-      height: 20px;
-      background-color: #4C8FA0;
-      background-color: rgba(76, 143, 160, 0.8);
-
-    }
-  }
 
   &__contacts {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: flex-end;
-    align-items: center;
-    max-width: 180px;
-    color: #FFF;
-    font-size: 20px;
-    font-weight: 800;
-    gap: 2px;
-  }
+    a{white-space: nowrap;}
 
-  &__telephone {
-    margin-bottom: 5px;
-    color: #FFF;
-
-    img {
-      height: 15px;
-      padding-top: 3px;
-      margin-right: 6px;
+    @media (max-width: 960px) {
+      a{color:#254D5A;}
     }
   }
+  &__whatsapp,&__telegram{
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+
 
   &__items {
     display: flex;
+    flex-wrap: wrap;
+    align-content: center ;
     margin-bottom: 20px;
+    @media (max-width: 540px) {
+      flex-direction: column;
+      align-content: flex-end;
+
+    }
   }
 
   &__link {
@@ -331,25 +372,34 @@ a {
   }
 
   &__buttons {
+    @media (max-width: 540px) {
+      grid-column: 1/3 ;
+    }
     display: flex;
     gap: 20px;
+
   }
 }
 
 .mainsection {
   &__row {
     display: flex;
+
   }
 
   &__left {
     max-width: 660px;
     padding-bottom: 136px;
+    @media (max-width: 960px) {
+      max-width: 100%;
+    }
+
   }
 
   &__title {
-
     margin-bottom: 30px;
     padding-right: 30px;
+
   }
 
   &__description {
@@ -391,18 +441,17 @@ a {
 
   &__buttons {
     display: flex;
-  }
-
-  &__telephone {
-    border: 1px solid #254D5A;
-    border-radius: 50vh;
-    margin-right: 40px;
-    color: #575D62;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: normal;
-    text-align: center;
-    padding: 18px 40px;
+    .telephone{
+      border: 1px solid #254D5A;
+      margin-right: 40px;
+    }
+    @media (max-width: 670px) {
+      flex-direction: column;
+      .telephone{
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__right {
@@ -417,6 +466,9 @@ a {
     margin-left: 20px;
     border-radius: 25px;
     overflow: hidden;
+    @media (max-width: 960px) {
+      display: none;
+    }
 
     img {
       position: absolute;
@@ -442,6 +494,10 @@ a {
   &__list {
     display: flex;
     margin: 0 -13px;
+    @media (max-width: 780px){
+      flex-direction: column;
+      margin: 0;
+    }
   }
 
   &__item {
@@ -449,6 +505,9 @@ a {
     display: flex;
     align-items: center;
     margin: 0 13px;
+    @media (max-width: 780px){
+      margin:0 20px 20px 20px;
+    }
   }
 
   &__icon {
@@ -469,7 +528,10 @@ a {
   padding-top: 100px;
   padding-bottom: 87px;
   margin-bottom: 87px;
-
+  @media (max-width: 540px) {
+    padding-top: 50px;
+    margin-bottom: 20px;
+  }
   &__title {
     text-align: center;
     margin-bottom: 20px;
@@ -535,9 +597,7 @@ a {
     position: relative;
     background-color: #4C8FA0;
     border-radius: 80px;
-    padding-left: 80px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding: 70px 80px;
     z-index: 0;
   }
 
@@ -546,6 +606,9 @@ a {
     right: 0;
     bottom: 0;
     z-index: 1;
+    @media (max-width: 780px){
+      display: none;
+    }
   }
 
   &__content {
@@ -578,11 +641,26 @@ a {
       margin-bottom: 10px;
     }
   }
+  &__form{
+    display: flex;
+    .telephone{
+      margin-right: 20px;
+      @media (max-width:780px){
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    @media (max-width:780px){
+      flex-direction: column;
+    }
+  }
 }
 
 .reasons {
   padding-top: 100px;
-
+  @media (max-width:540px){
+    padding-top: 50px;
+  }
   &__title {
     text-align: center;
     margin-bottom: 40px;
@@ -625,29 +703,46 @@ a {
 }
 
 .price {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__title{
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  &__wrapper{
+    position: relative;
+  }
+  &__shadow{
+    position: absolute;
+    border-radius: 30px;
+    right: 0;
+    width: calc(100% - 400px);
+    height: 100%;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.10);
+    z-index: -1;
+    @media (max-width: 840px) {
+      width: 420px;
+    }
+    @media (max-width: 640px) {
+      display: none;
+    }
+  }
   &__table {
     border-collapse: collapse;
 
-    col:nth-child(2) {
-      background: //linear-gradient(to bottom, white 0, transparent 3px, transparent 3px),
-              //linear-gradient(to top, white 0, transparent 3px, transparent 3px),
-              //linear-gradient(to left, white , gray 3px, transparent 3px ),
-              linear-gradient(to right, white, gray 3px, transparent 3px);
-      //linear-gradient(to top, white , gray 3px, transparent 3px ),
-      //linear-gradient(to bottom, white , gray 3px, transparent 3px )
-    }
-
-    tr td {
-      position: relative;
+    td {
       text-align: center;
       z-index: 2;
       background: #FFF;
-      box-shadow: 10px 0 0 10px gray;
+      //outline: 2px solid red;
+    }
+    td.pad{
+      width: 40px;
+      background: none;
     }
 
-    tr td:first-child {
-      max-width: 360px;
-      padding-right: 40px;
+    td:first-child {
+      width: 360px;
       padding-top: 10px;
       padding-bottom: 10px;
       border-bottom: 1px solid #C9C9C9;
@@ -667,7 +762,7 @@ a {
       //box-shadow: -20px 0 20px 5px rgba(0, 0, 0, 0.10);
     }
 
-    td.cb {
+    td:nth-child(4){
       border-left: 2px solid #E8E8E8;
       border-right: 2px solid #E8E8E8;
     }
@@ -692,10 +787,47 @@ a {
       }
 
       .blank {
-        background-color: #FFFFFF;
+        background: none;
+        border: none;
       }
     }
-
+    .not_req{
+      color: #979B9F;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    .table_button{
+      color: #FFF;
+      font-family: "Buyan", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.24px;
+      background: #254D5A;
+      margin-right: 20px;
+      margin-left: 20px;
+      padding-top: 18px;
+      padding-bottom: 16px;
+      border-radius: 50vh;
+      transition: 0.3s;
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+      }
+    }
+    .bottom{
+      .f_column{
+        border: none;
+      }
+      td:nth-child(3){
+        border-bottom-left-radius: 30px;
+      }
+      td:last-child{
+        border-bottom-right-radius: 30px;
+      }
+    }
   }
 }
 
@@ -711,6 +843,9 @@ a {
 
   &__row {
     display: flex;
+    @media (max-width: 780px){
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -773,6 +908,15 @@ a {
   }
 }
 .diff{
+  @media (max-width: 840px) {
+    &__second{
+      display: none;
+    }
+    &__us{
+      transform: scale(1);
+      margin: 0 0;
+    }
+  }
   padding-top: 100px;
   padding-bottom: 100px;
   &__title{
@@ -881,16 +1025,31 @@ a {
 }
 .about{
   padding-bottom: 100px;
+  @media (max-width: 540px){
+    padding-bottom: 50px;
+  }
+
   &__row{
     display: flex;
+    @media (max-width: 960px) {
+      flex-direction: column;
+    }
   }
   &__text{
     flex: 1;
     margin-right: 40px;
+    @media (max-width: 960px) {
+      margin-left: 20px;
+      margin-right: 20px;
+      margin-bottom: 40px;
+    }
   }
 
   &__title{
     margin-bottom: 20px;
+    @media (max-width: 960px){
+      text-align: center;
+    }
   }
   &__description{
     margin-bottom: 20px;
@@ -900,8 +1059,13 @@ a {
     line-height: normal;
   }
   &__link{
-    width: 50%;
+    display: block;
     text-align: center;
+    width: 50%;
+    @media (max-width: 960px){
+      margin: 0 auto;
+    }
+    //
   }
   &__left{
     flex: 1;
@@ -928,10 +1092,16 @@ a {
       background: url(../img/l_arrow.png);
       left: -30px;
       z-index: 2;
+      @media (max-width: 960px) {
+        left:10px;
+      }
     }
     .slick-next{
       background: url(../img/r_arrow.png);
       right: -30px;
+      @media (max-width: 960px) {
+        right:10px;
+      }
     }
   }
   &__see{
@@ -953,21 +1123,30 @@ a {
     font-size: 0;
   }
   &__list{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+    align-items: end;
     justify-content: space-between;
-    align-items: flex-end;
+    column-gap: 20px;
+    row-gap: 30px;
+
   }
   &__item{
     transition:0.3s;
+    text-align: center;
     &:hover{
       cursor: pointer;
       transform: scale(1.1);
     }
   }
-}
 
+}
 .reviews{
   padding-top: 100px;
+  @media (max-width: 960px) {
+    display: none;
+    
+  }
   &__title{
     text-align: center;
   }
@@ -976,6 +1155,7 @@ a {
     max-width: 340px;
     display: flex;
     justify-content: space-between;
+
     button{
       color: #BFBFBF;
       font-family: "Buyan", sans-serif;
@@ -1050,6 +1230,205 @@ a {
     color: #575D62;
     font-size: 15px;
     font-weight: 500;
+    line-height: normal;
+  }
+}
+.problems{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  &__title{
+    text-align: center;
+    margin-bottom: 80px;
+  }
+  &__row{
+    display: flex;
+
+  }
+  &__box{
+    flex: 1;
+    position: relative;
+    margin-right: 40px;
+    margin-left: 40px;
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+  &__shadow{
+    position: absolute;
+    border-radius: 20px;
+    background: #4C8FA0;
+    top: -40px;
+    left: -40px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    @media (max-width: 960px) {
+      display: none;
+    }
+  }
+  &__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+  &__text{
+    flex:1;
+  }
+  &__list li{
+    margin-left: 20px;
+    color: #575D62;
+    font-size: 20px;
+    line-height: normal;
+    margin-bottom: 20px;
+    list-style-type: disc;
+  }
+  &__form{
+    border-radius: 30px;
+    background: #4C8FA0;
+    padding: 30px;
+  }
+  &__form-title{
+    color: #FFF;
+    font-family: "Buyan", sans-serif;
+    font-size: 40px;
+    line-height: normal;
+    letter-spacing: 0.4px;
+  }
+  &__form-description{
+    color: #FFF;
+    font-size: 18px;
+    line-height: normal;
+    margin-bottom: 25px;
+  }
+  &__button{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    input{
+      flex:1;
+      max-width: 210px;
+    }
+
+
+  }
+
+}
+.footer{
+  background: #4C8FA0;
+  padding-top: 60px;
+  padding-bottom: 42px;
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    border-bottom: 2px solid #FFF;
+  }
+  &__col1{
+    margin-right: 50px;
+  }
+  &__col2{
+    max-width: 360px;
+    @media (max-width: 960px) {
+      display: none;
+      
+    }
+  }
+  &__logo{
+    color: #FFF;
+    font-size: 64px;
+    margin-bottom: 15px;
+  }
+  &__soctitle{
+    color: #FFF;
+    font-family: "Buyan", sans-serif;
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+  &__subtitle{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+  &__list{
+    li{
+      color: #FFF;
+      font-size: 18px;
+      line-height: normal;
+      a{
+        color: #FFF;
+        font-size: 18px;
+        line-height: normal;}
+    }
+  }
+  &__service{
+    margin-bottom: 15px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__item{
+    margin-bottom: 5px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__contacts{
+    margin-bottom: 30px;
+  }
+  &__address{
+    color: #FFF;
+    font-size: 20px;
+    line-height: normal;
+    padding-left: 20px;
+    position: relative;
+    &:before{
+      content: "";
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      background: url("../img/footer_dot.svg") center no-repeat;
+      left: 0;
+      top: 6px;
+    }
+  }
+  &__mode{
+    color: #FFF;
+    font-size: 20px;
+    line-height: normal;
+    font-weight: 700;
+    padding-left: 20px;
+    position: relative;
+    &:before{
+      content: "";
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      background: url("../img/footer_clock.svg") center no-repeat;
+      left: 0;
+      top: 6px;
+    }
+  }
+  &__bottom{
+    justify-content: space-between;
+    padding-top: 30px;
+  }
+  &__conf{
+    color: #FFF;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: normal;
+    text-decoration-line: underline;
+  }
+  &__made{
+    color: #FFF;
+    text-align: right;
+    font-size: 15px;
+    font-weight: 300;
     line-height: normal;
   }
 }
